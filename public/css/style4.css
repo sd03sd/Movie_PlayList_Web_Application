@@ -1,0 +1,189 @@
+/* Same Appearance as style.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-color: #FFD700;
+    --secondary-color: #333;
+    --background-color: #222;
+    --text-color: #fff;
+    --accent-color: #FF4500;
+}
+
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    background: var(--secondary-color);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.logout-container {
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+/* PlayList Styles */
+.playList-container {
+    margin-top: 50px;
+}
+
+.playList-container h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.collection {
+    width: 100%; /* Take up the full width of the container */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+.collection h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white; /* Set the movie collection name color to white */
+    position: relative;
+}
+
+.playList-item {
+    background-color: grey; /* Setting the background color to grey */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative; /* Positioning context for the delete button */
+    margin-bottom: 10px; /* Add space between movies */
+}
+
+.playList-item h4 {
+    color: white; /* Setting the movie name color to white */
+    overflow: hidden; /* Ensure movie name stays on one line */
+    white-space: nowrap; /* Prevent wrapping of movie name */
+    text-overflow: ellipsis; /* Show ellipsis if movie name exceeds container width */
+}
+
+.delete-button,
+.delete-collection-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.share-collection-button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 5px;
+    right: 200px;
+}
+
+.delete-button:hover,
+.delete-collection-button:hover {
+    background-color: #c82333;
+}
+
+.back-btn,
+.logout-btn {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.back-btn:hover,
+.logout-btn:hover {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .playList-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collection {
+        width: 100%;
+    }
+}

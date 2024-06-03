@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Website</title>
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header>
+            <div class="container header-container">
+                <div class="logo">
+                    <p>Movie<span>Mingle.</span></p>
+                </div>
+                <div class="search-container">
+                    <div class="search-element">
+                        <input type="text" class="form-control" placeholder="Search Movie Title ..." id="movie-search-box" onkeyup="findMovies()" onclick="findMovies()">
+                        <div class="search-list hide-search-list" id="search-list">
+                            <!-- list here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <a class="btn playlist-btn" href="/playlist">Playlist</a>
+                    <a class="btn logout-btn" href="/logout">Logout</a>
+                </div>
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- main content -->
+        <main>
+            <div class="container">
+                <!-- result container -->
+                <div class="result-container">
+                    <div class="result-grid" id="result-grid">
+                        <!-- movie information here -->
+                    </div>
+                </div>
+                <!-- end of result container -->
+            </div>
+        </main>
+        <!-- end of main content -->
+    </div>
+
+    <!-- movie app js -->
+    <script src="/js/movieScreen.js"></script>
+</body>
+</html>
